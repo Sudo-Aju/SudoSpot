@@ -9,11 +9,11 @@
 
 <div>
 
-<!-- Header and Logo Placeholder -->
+
 <header>
 <h1>
-<!-- Logo Image Placeholder (90x90, dark background, green text) -->
-<img src="" alt="SudoSpot Logo" style="vertical-align: middle; margin-right: 10px;">
+
+<img src="Logo.png" alt="SudoSpot Logo" width=90 height= 90  style="vertical-align: middle;">
 SudoSpot: Spotify Terminal Player
 </h1>
 </header>
@@ -22,7 +22,7 @@ SudoSpot: Spotify Terminal Player
 SudoSpot is a minimalist, cross-platform Spotify client built for the command line. It uses the <a href="https://github.com/charmbracelet/bubbletea">Bubble Tea TUI framework</a> and the Spotify Web API to provide real-time status and playback control for any device connected to your Spotify account (phone, TV, desktop).
 </p>
 
-<!-- Features Section -->
+
 <section>
 <h2>✨ Features</h2>
 <ul>
@@ -32,15 +32,15 @@ SudoSpot is a minimalist, cross-platform Spotify client built for the command li
 <li><strong>Cool Visualizer Line:</strong> A stylized progress bar acts as a visualizer line, showing the current progress through the track.</li>
 </ul>
 
-<!-- Terminal Screenshot Placeholder -->
+
 <div>
 <p>Terminal Screenshot Placeholder (Illustrates the UI)</p>
-<!-- Screenshot Image Placeholder (600x150, black background, white text) -->
+
 <img src="SudoSpot.png" alt="SudoSpot Terminal Screenshot" style="width: 100%; max-width: 600px; height: auto; border: 1px solid #1DB954;">
 </div>
 </section>
 
-<!-- Installation Section -->
+
 <section>
 <h2>🚀 Installation</h2>
 
@@ -76,7 +76,7 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </ol>
 </section>
 
-<!-- Controls Section -->
+
 <section>
 <h2>🕹️ Controls</h2>
 <p>SudoSpot allows you to control the active Spotify playback on any device connected to your account.</p>
@@ -126,7 +126,7 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </div>
 </section>
 
-<!-- Attribution and Contributing -->
+
 <section>
 <div>
 <h2>🤝 Attribution</h2>
