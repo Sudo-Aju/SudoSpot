@@ -1,9 +1,12 @@
 package main
 
 import(
+	"bufio"
 	"fmt"
 	"log"
 	"os"
+	"strings"
+
 
 	"github.com/Sudo-Aju/sudospot/internal/auth"
 	"github.com/Sudo-Aju/sudospot/internal/ui"
@@ -22,7 +25,24 @@ func main() {
 	clientSecret := os.Getenv("SPOTIFY_SECRET")
 	
 	if clientID == "" || clientSecret == "" {
-		log.Fatal("please set SPOTIFY_ID and SPOTIFY_SECRET environment variables.")
+		reader := bufio.NewReader(os.Stdin)
+		fmt.Println("Spotify credentials not found in environment.")
+
+		if clientID == "" {
+			fmt.Print("Enter Spotify Client ID: ")
+			input, _ := reader.ReadString('\n')
+			clientID = strings.TrimSpace(input)
+		}
+
+		if clientSecret == "" {
+			fmt.Print("Enter Spotify Client Secret: ")
+			input, _ := reader.ReadString('\n')
+			clientSecret = strings.TrimSpace(input)
+		}
+	}
+
+	if clientID == "" || clientSecret == "" {
+		log.Fatal("please set SPOTIFY_ID and SPOTIFY_SECRET environment variables or enter them when prompted.")
 	}
 
 	client, err := auth.Authenticate(clientID, clientSecret)

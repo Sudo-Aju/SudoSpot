@@ -119,7 +119,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 
 func (m Model) View() string {
-	header := titleStyle.Render(" ♫ " + m.TrackName)
+	header := titleStyle.Render("  ♫  " + m.TrackName)
 	artist := artistStyle.Render(m.Artist)
 
 	width := 40
