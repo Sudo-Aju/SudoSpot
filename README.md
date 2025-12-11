@@ -9,11 +9,12 @@
 
 <div>
 
-
+<!-- Header and Logo Placeholder -->
 <header>
 <h1>
-
-<img src="Logo.png" alt="SudoSpot Logo" width=90 height= 90  style="vertical-align: middle;">
+<!-- Logo Image Placeholder (90x90, dark background, green text) -->
+<img src="Logo.png" alt="SudoSpot Logo" width=240 height=240 style="vertical-align: middle; ">
+<br>
 SudoSpot: Spotify Terminal Player
 </h1>
 </header>
@@ -22,7 +23,7 @@ SudoSpot: Spotify Terminal Player
 SudoSpot is a minimalist, cross-platform Spotify client built for the command line. It uses the <a href="https://github.com/charmbracelet/bubbletea">Bubble Tea TUI framework</a> and the Spotify Web API to provide real-time status and playback control for any device connected to your Spotify account (phone, TV, desktop).
 </p>
 
-
+<!-- Features Section -->
 <section>
 <h2>✨ Features</h2>
 <ul>
@@ -32,15 +33,15 @@ SudoSpot is a minimalist, cross-platform Spotify client built for the command li
 <li><strong>Cool Visualizer Line:</strong> A stylized progress bar acts as a visualizer line, showing the current progress through the track.</li>
 </ul>
 
-
+<!-- Terminal Screenshot Placeholder -->
 <div>
 <p>Terminal Screenshot Placeholder (Illustrates the UI)</p>
-
+<!-- Screenshot Image Placeholder (600x150, black background, white text) -->
 <img src="SudoSpot.png" alt="SudoSpot Terminal Screenshot" style="width: 100%; max-width: 600px; height: auto; border: 1px solid #1DB954;">
 </div>
 </section>
 
-
+<!-- Installation Section -->
 <section>
 <h2>🚀 Installation</h2>
 
@@ -53,20 +54,19 @@ SudoSpot is a minimalist, cross-platform Spotify client built for the command li
 
 <h3>Running the Application</h3>
 <div>
-<p>1. Clone the Repository:</p>
-<pre><code>git clone https://github.com/Sudo-Aju/sudospot.git
-cd sudospot</code></pre>
+<p>1. **Install SudoSpot** using the Go toolchain:</p>
+<pre><code>go install github.com/Sudo-Aju/sudospot/cmd/sudospot@latest</code></pre>
 
-<p>2. Set Environment Variables (replace placeholders):</p>
-<pre><code>export SPOTIFY_ID="YOUR_CLIENT_ID"
-export SPOTIFY_SECRET="YOUR_CLIENT_SECRET"</code></pre>
+<p>2. Run SudoSpot from your terminal:</p>
+<pre><code>sudospot</code></pre>
 
-<p>3. Run the Application:</p>
-<pre><code>go run cmd/sudospot/main.go</code></pre>
+<p>
+(SudoSpot will prompt you to enter your Spotify Client ID and Secret upon first run.)
+</p>
 </div>
 
 <h3>First-Time Authentication</h3>
-<p>The first time you run SudoSpot, it will prompt you with a URL:</p>
+<p>The first time you run SudoSpot, it will prompt you for your Client ID and Secret, and then proceed with the URL authentication:</p>
 <pre><code>Please log in to Spotify by visiting the following page in your browser:
 http://127.0.0.1:8080/callback?state=...</code></pre>
 <ol>
@@ -76,7 +76,7 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </ol>
 </section>
 
-
+<!-- Controls Section -->
 <section>
 <h2>🕹️ Controls</h2>
 <p>SudoSpot allows you to control the active Spotify playback on any device connected to your account.</p>
@@ -97,12 +97,12 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 <td>Pauses the currently playing track or resumes playback.</td>
 </tr>
 <tr>
-<th>N</th>
+<th>&gt;</th>
 <td>Next Track</td>
 <td>Skips to the next song in the queue.</td>
 </tr>
 <tr>
-<th>P</th>
+<th>&lt;</th>
 <td>Previous Track</td>
 <td>Skips back to the previous song.</td>
 </tr>
@@ -117,7 +117,7 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 <td>Jumps the playback 10 seconds back in the track.</td>
 </tr>
 <tr>
-<th>Q / Ctrl+C</th>
+<th>Q</th>
 <td>Quit</td>
 <td>Exits the SudoSpot application gracefully.</td>
 </tr>
@@ -126,7 +126,7 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </div>
 </section>
 
-
+<!-- Attribution and Contributing -->
 <section>
 <div>
 <h2>🤝 Attribution</h2>
