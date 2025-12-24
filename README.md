@@ -61,8 +61,11 @@ cd sudospot</code></pre>
 <pre><code>export SPOTIFY_ID="YOUR_CLIENT_ID"
 export SPOTIFY_SECRET="YOUR_CLIENT_SECRET"</code></pre>
 
-<p>3. Run the Application:</p>
-<pre><code>go run cmd/sudospot/main.go</code></pre>
+<p>3. Build the Standalone Executable:</p>
+<pre><code>go build -o sudospot cmd/sudospot/main.go</code></pre>
+
+<p>4. Run the Application:</p>
+<pre><code>./sudospot</code></pre>
 </div>
 
 <h3>First-Time Authentication</h3>
