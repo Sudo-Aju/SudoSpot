@@ -46,8 +46,9 @@ SudoSpot is a minimalist, cross-platform Spotify client built for the command li
 <h3>Installation</h3>
 
 <h4>Option 1: Homebrew (Recommended)</h4>
-<p>If you have Homebrew installed, you can install SudoSpot directly from the repository:</p>
-<pre><code>brew tap Sudo-Aju/sudospot
+<p>If you have Homebrew installed, you can install SudoSpot directly from the repository.
+   Since this is a custom tap, you need to specify the URL:</p>
+<pre><code>brew tap Sudo-Aju/sudospot https://github.com/Sudo-Aju/sudospot
 brew install sudospot</code></pre>
 
 <h4>Option 2: Go Install</h4>
