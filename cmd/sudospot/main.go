@@ -20,13 +20,13 @@ import(
 
 func main() {
 
-	// Define config structure
+	
 	type Config struct {
 		ClientID     string `json:"spotify_id"`
 		ClientSecret string `json:"spotify_secret"`
 	}
 
-	// Get user config directory
+	
 	configDir, err := os.UserConfigDir()
 	if err != nil {
 		log.Fatal("Could not determine user config directory:", err)
@@ -39,14 +39,14 @@ func main() {
 	configFile := filepath.Join(appConfigDir, "config.json")
 	tokenPath := filepath.Join(appConfigDir, "token.json")
 
-	// Load existing config
+	
 	var config Config
 	if file, err := os.Open(configFile); err == nil {
 		json.NewDecoder(file).Decode(&config)
 		file.Close()
 	}
 
-	// Fallback to env vars
+	
 	if config.ClientID == "" {
 		config.ClientID = os.Getenv("SPOTIFY_ID")
 	}
@@ -54,7 +54,7 @@ func main() {
 		config.ClientSecret = os.Getenv("SPOTIFY_SECRET")
 	}
 
-	// Prompt if still missing
+	
 	if config.ClientID == "" || config.ClientSecret == "" {
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Println("Spotify credentials not found.")
@@ -71,7 +71,7 @@ func main() {
 			config.ClientSecret = strings.TrimSpace(input)
 		}
 
-		// Save to config file
+		
 		file, err := os.Create(configFile)
 		if err != nil {
 			log.Printf("Warning: failed to save config: %v", err)
