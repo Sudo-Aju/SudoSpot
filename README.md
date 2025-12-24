@@ -9,10 +9,10 @@
 
 <div>
 
-<!-- Header and Logo Placeholder -->
+
 <header>
 <h1>
-<!-- Logo Image Placeholder (90x90, dark background, green text) -->
+
 <img src="Logo.png" alt="SudoSpot Logo" width=240 height=240 style="vertical-align: middle; ">
 <br>
 SudoSpot: Spotify Terminal Player
@@ -23,9 +23,9 @@ SudoSpot: Spotify Terminal Player
 SudoSpot is a minimalist, cross-platform Spotify client built for the command line. It uses the <a href="https://github.com/charmbracelet/bubbletea">Bubble Tea TUI framework</a> and the Spotify Web API to provide real-time status and playback control for any device connected to your Spotify account (phone, TV, desktop).
 </p>
 
-<!-- Features Section -->
+
 <section>
-<h2>✨ Features</h2>
+<h2>Features</h2>
 <ul>
 <li><strong>Real-time Status:</strong> Displays the currently playing track, artist, and progress.</li>
 <li><strong>Universal Control:</strong> Control music playing on <strong>any device</strong> linked to your Spotify account.</li>
@@ -33,17 +33,14 @@ SudoSpot is a minimalist, cross-platform Spotify client built for the command li
 <li><strong>Cool Visualizer Line:</strong> A stylized progress bar acts as a visualizer line, showing the current progress through the track.</li>
 </ul>
 
-<!-- Terminal Screenshot Placeholder -->
-<div>
-<p>Terminal Screenshot Placeholder (Illustrates the UI)</p>
-<!-- Screenshot Image Placeholder (600x150, black background, white text) -->
+
 <img src="SudoSpot.png" alt="SudoSpot Terminal Screenshot" style="width: 100%; max-width: 600px; height: auto; border: 1px solid #1DB954;">
 </div>
 </section>
 
-<!-- Installation Section -->
+
 <section>
-<h2>🚀 Installation</h2>
+<h2>Installation</h2>
 
 <h3>Prerequisites</h3>
 <ul>
@@ -76,9 +73,9 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </ol>
 </section>
 
-<!-- Controls Section -->
+
 <section>
-<h2>🕹️ Controls</h2>
+<h2>Controls</h2>
 <p>SudoSpot allows you to control the active Spotify playback on any device connected to your account.</p>
 
 <div>
@@ -126,10 +123,10 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </div>
 </section>
 
-<!-- Attribution and Contributing -->
+
 <section>
 <div>
-<h2>🤝 Attribution</h2>
+<h2>Attribution</h2>
 <p>SudoSpot is built on the shoulders of these fantastic Go libraries:</p>
 <ul>
 <li><a href="https://github.com/charmbracelet/bubbletea">Bubble Tea</a>: The powerful TUI framework.</li>
@@ -137,16 +134,14 @@ http://127.0.0.1:8080/callback?state=...</code></pre>
 </ul>
 </div>
 <div>
-<h2>👨‍💻 Contributing</h2>
+<h2>Contributing</h2>
 <p>
 Contributions are welcome! Feel free to open an issue or submit a pull request if you have ideas for improvements or new features.
 </p>
 </div>
 </section>
 
-<footer>
-SudoSpot Project Documentation
-</footer>
+
 
 </div>
 </body>
