@@ -18,7 +18,8 @@ const (
 	tokenFile = "token.json"
 )
 
-func Authenticate(clientID, clientSecret string) (*spotify.Client, error) {
+
+func Authenticate(clientID, clientSecret, tokenPath string) (*spotify.Client, error) {
 	if clientID == "" || clientSecret == "" {
 		return nil, fmt.Errorf("client ID and Secret are required")
 	}
@@ -34,7 +35,7 @@ func Authenticate(clientID, clientSecret string) (*spotify.Client, error) {
 		spotifyauth.WithClientSecret(clientSecret),
 	)
 	
-	if token, err := loadToken(); err == nil {
+	if token, err := loadToken(tokenPath); err == nil {
 		client := spotify.New(auth.Client(context.Background(), token))
 		_, err := client.PlayerCurrentlyPlaying(context.Background())
 		if err == nil {
@@ -54,7 +55,7 @@ func Authenticate(clientID, clientSecret string) (*spotify.Client, error) {
 			log.Printf("Error getting token: %v", err)
 			return
 		}
-		saveToken(token)
+		saveToken(token, tokenPath)
 
 		client := spotify.New(auth.Client(r.Context(), token))
 		fmt.Fprintf(w, "login Completed! You can close this window and return to the SudoSpot")
@@ -78,8 +79,8 @@ func Authenticate(clientID, clientSecret string) (*spotify.Client, error) {
 
 }
 
-func saveToken(tok *oauth2.Token) {
-	file, err := os.Create(tokenFile)
+func saveToken(tok *oauth2.Token, path string) {
+	file, err := os.Create(path)
 	if err != nil {
 		log.Printf("Warning: failed to save token: %v", err)
 		return
@@ -88,8 +89,8 @@ func saveToken(tok *oauth2.Token) {
 	json.NewEncoder(file).Encode(tok)
 }
 
-func loadToken() (*oauth2.Token, error) {
-	file, err := os.Open(tokenFile)
+func loadToken(path string) (*oauth2.Token, error) {
+	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
 	}

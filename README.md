@@ -44,39 +44,34 @@ SudoSpot is a minimalist, cross-platform Spotify client built for the command li
 <section>
 <h2>🚀 Installation</h2>
 
-<h3>Prerequisites</h3>
-<ul>
-<li>Go (1.18+)</li>
-<li>A Spotify Developer Account (to get your Client ID and Secret).</li>
-<li>Set the <strong>Redirect URI</strong> in your Spotify App settings to: <code>http://127.0.0.1:8080/callback</code></li>
-</ul>
 
-<h3>Running the Application</h3>
-<div>
+<h3>Installation</h3>
+
+<h4>Option 1: Homebrew (Recommended)</h4>
+<p>If you have Homebrew installed, you can install SudoSpot directly from the repository:</p>
+<pre><code>brew tap Sudo-Aju/sudospot
+brew install sudospot</code></pre>
+
+<h4>Option 2: Build from Source</h4>
 <p>1. Clone the Repository:</p>
 <pre><code>git clone https://github.com/Sudo-Aju/sudospot.git
 cd sudospot</code></pre>
 
-<p>2. Set Environment Variables (replace placeholders):</p>
-<pre><code>export SPOTIFY_ID="YOUR_CLIENT_ID"
-export SPOTIFY_SECRET="YOUR_CLIENT_SECRET"</code></pre>
-
-<p>3. Build the Standalone Executable:</p>
+<p>2. Build the Standalone Executable:</p>
 <pre><code>go build -o sudospot cmd/sudospot/main.go</code></pre>
 
-<p>4. Run the Application:</p>
-<pre><code>./sudospot</code></pre>
-</div>
+<p>3. Move to your PATH (optional):</p>
+<pre><code>mv sudospot /usr/local/bin/</code></pre>
 
-<h3>First-Time Authentication</h3>
-<p>The first time you run SudoSpot, it will prompt you with a URL:</p>
-<pre><code>Please log in to Spotify by visiting the following page in your browser:
-http://127.0.0.1:8080/callback?state=...</code></pre>
-<ol>
-<li>Open the URL in your browser to authorize SudoSpot.</li>
-<li>Once authorized, the terminal will automatically launch the player.</li>
-<li>SudoSpot saves a token (<code>token.json</code>) locally, so you won't need to log in again.</li>
-</ol>
+<h3>Configuration & Authentication</h3>
+<p>SudoSpot stores your credentials and tokens locally so you only need to log in once.</p>
+
+<p>1. Run <code>sudospot</code> in your terminal.</p>
+<p>2. If it's your first time, you will be prompted to enter your Spotify Client ID and Secret.
+(You can get these from the <a href="https://developer.spotify.com/dashboard/">Spotify Developer Dashboard</a>).
+</p>
+<p>3. A browser window will open to authorize the application.</p>
+<p>4. Once authorized, your credentials and token are saved to your user config directory (e.g., <code>~/.config/sudospot/</code>), and you won't need to do this again.</p>
 </section>
 
 
